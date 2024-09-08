@@ -1,0 +1,154 @@
+@media all {
+  * {
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  span {
+    cursor: default;
+  }
+  .fundo-azul {
+    background-color: var(--azul) !important;
+  }
+  .fundo-rosa {
+    background-color: var(--rosa) !important;
+  }
+  .fundo-amarelo {
+    background-color: var(--amarelo) !important;
+  }
+  :root {
+    --preto: #212121;
+    --azul: #3E9EFF;
+    --rosa: #FF2C70;
+    --amarelo: #E4A500;
+    --amarelo-escuro: #bd8800;
+    --verde: #3D8923;
+    --verde-escuro: #285b17;
+  }
+  html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  html main, body main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  html main #content #game-boy, body main #content #game-boy {
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  html main #content #game-boy .fundo, body main #content #game-boy .fundo {
+    height: 75vh;
+    width: 80vw;
+    background-color: var(--verde);
+    box-shadow: 12px 12px 0px 10px var(--verde-escuro);
+    border-radius: 25px;
+    padding: 20px 0px;
+  }
+  html main #content #game-boy .fundo #tela, body main #content #game-boy .fundo #tela {
+    height: 50vh;
+    width: 70vw;
+    background-color: var(--preto);
+    border-radius: 15px;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  html main #content #game-boy .fundo #tela #desligado, body main #content #game-boy .fundo #tela #desligado {
+    width: 70vw;
+    height: 50vh;
+    background-color: var(--preto);
+    position: absolute;
+    display: none;
+  }
+  html main #content #game-boy .fundo #tela .projetos, body main #content #game-boy .fundo #tela .projetos {
+    /* position: absolute; */
+    display: flex;
+  }
+  html main #content #game-boy .fundo #tela .projetos .projeto, body main #content #game-boy .fundo #tela .projetos .projeto {
+    height: 50vh;
+    width: 70vw;
+    border-radius: 30px;
+    display: none;
+  }
+  html main #content #game-boy .fundo #botoes-game-boy, body main #content #game-boy .fundo #botoes-game-boy {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  html main #content #game-boy .fundo #botoes-game-boy span, body main #content #game-boy .fundo #botoes-game-boy span {
+    font-weight: 800;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  html main #content #game-boy .fundo #botoes-game-boy [class$=direita] span, body main #content #game-boy .fundo #botoes-game-boy [class$=direita] span {
+    transform: rotate(90deg);
+  }
+  html main #content #game-boy .fundo #botoes-game-boy [class$=esquerda] span, body main #content #game-boy .fundo #botoes-game-boy [class$=esquerda] span {
+    transform: rotate(-90deg);
+  }
+  html main #content #game-boy .fundo #botoes-game-boy [class^=botao], body main #content #game-boy .fundo #botoes-game-boy [class^=botao] {
+    width: 60px;
+    border-radius: 30px;
+    background-color: var(--amarelo);
+    box-shadow: 3px 7px 0px var(--amarelo-escuro);
+    position: relative;
+    transition-duration: 0.1s;
+  }
+  html main #content #game-boy .fundo #botoes-game-boy [class*=seta], body main #content #game-boy .fundo #botoes-game-boy [class*=seta] {
+    height: 60px;
+  }
+  html main #content #game-boy .fundo #botoes-game-boy .botao-start, body main #content #game-boy .fundo #botoes-game-boy .botao-start {
+    height: 30px;
+    padding-top: 3px;
+    text-align: center;
+  }
+  html main #content #tela-emuladora, body main #content #tela-emuladora {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  html main #content, body main #content {
+    margin-left: 1.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  html main #content #tela-emuladora, body main #content #tela-emuladora {
+    height: 70vh;
+    width: 45vw;
+    background-color: rgb(45, 45, 45);
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+  }
+  html main #content #tela-emuladora iframe, body main #content #tela-emuladora iframe {
+    height: 90%;
+    width: 95%;
+  }
+  html main #content #game-boy .fundo, body main #content #game-boy .fundo {
+    width: 45vw;
+    height: 70vh;
+  }
+  html main #content #game-boy .fundo #tela, body main #content #game-boy .fundo #tela {
+    width: 40vw;
+  }
+  html main #content #game-boy .fundo #tela #desligado, body main #content #game-boy .fundo #tela #desligado {
+    width: 40vw;
+  }
+  html main #content #game-boy .fundo #tela .projetos .projeto, body main #content #game-boy .fundo #tela .projetos .projeto {
+    width: 40vw;
+  }
+}/*# sourceMappingURL=main.css.map */

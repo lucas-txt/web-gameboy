@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+
+
+@media all {
+    * {
+        box-sizing: border-box;
+        font-family: 'Prompt', sans-serif;
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+
+    span {
+        cursor: default;
+    }
+
+    .fundo-azul {background-color: var(--azul) !important;}
+    .fundo-rosa {background-color: var(--rosa) !important;}
+    .fundo-amarelo {background-color: var(--amarelo) !important;}
+
+    :root {
+
+        --preto: #212121;
+           
+        --azul: #3E9EFF;   
+        --rosa: #FF2C70;
+
+        --amarelo: #E4A500;
+        --amarelo-escuro: #bd8800;
+        
+        --verde: #3D8923;
+        --verde-escuro: #285b17;
+    } 
+    
+    html, body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+
+            #content {
+                #game-boy {
+                    margin: auto;
+                    height: fit-content;
+                    width: fit-content;
+    
+                    .fundo {
+                        height: 75vh;
+                        width: 80vw;
+                        background-color: var(--verde);
+                        box-shadow: 12px 12px 0px 10px var(--verde-escuro);
+                        
+                        border-radius: 25px;
+                        padding: 20px 0px;
+    
+                        #tela {
+                            height: 50vh;
+                            width: 70vw;
+                            background-color: var(--preto);
+                            border-radius: 15px;
+                            
+                            margin: auto;
+                            overflow-x: hidden;
+    
+                            #desligado {
+                                width: 70vw;
+                                height: 50vh;
+                                background-color: var(--preto);
+                                position: absolute;
+                                display: none;
+                            }
+    
+                            .projetos {
+                                /* position: absolute; */
+                                display: flex;
+    
+                                .projeto {
+                                    height: 50vh;
+                                    width: 70vw;
+                                    border-radius: 30px;
+                                    display: none;
+                                }
+                            }
+                        }
+    
+                        #botoes-game-boy {
+                            margin-top: 50px;
+                            
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+    
+                            span {
+                                font-weight: 800;
+                                font-size: 50px;
+                                position: absolute;
+                                top: 10%;
+                                left: 10%;
+                            }
+                            [class$="direita"] span {transform: rotate(90deg);}
+                            [class$="esquerda"] span {transform: rotate(-90deg);} 
+    
+                            [class^="botao"] {
+                                width: 60px;
+                                border-radius: 30px;
+                                background-color: var(--amarelo);
+                                
+                                box-shadow: 3px 7px 0px var(--amarelo-escuro);
+                                position: relative;
+                                transition-duration: 0.1s;
+                            }
+    
+                            [class*="seta"] {
+                                height: 60px;
+                            }
+    
+                            .botao-start {
+                                height: 30px;
+                        
+                                padding-top: 3px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                #tela-emuladora {display: none;}
+            }    
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    html, body{
+        
+        main {
+            #content {
+                margin-left: 1.8em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                
+                #tela-emuladora {
+                    height: 70vh;
+                    width: 45vw;
+                    background-color: rgb(45, 45, 45);
+                    border-radius: 25px;
+
+                    display: grid;
+                    place-items: center;
+                    
+                    iframe {
+                        height: 90%;
+                        width: 95%;
+                    }
+                }
+
+                #game-boy {
+                    .fundo {
+                        width: 45vw;
+                        height: 70vh;
+
+                        #tela {
+                            width: 40vw;
+                            
+                            #desligado {
+                                width: 40vw;
+                            }
+
+                            .projetos {
+                                .projeto {
+                                    width: 40vw;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
+
